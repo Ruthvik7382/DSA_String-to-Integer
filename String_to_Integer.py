@@ -11,9 +11,9 @@ class Solution(object):
         :rtype: int
         """
         INT_MIN, INT_MAX = -2**31, 2**31 - 1
-        s = s.strip()  # Remove leading and trailing whitespaces
+        s = s.strip() 
         if not s:
-            return 0  # Empty string, return 0
+            return 0
 
         b = ""
         for i, char in enumerate(s):
@@ -22,10 +22,10 @@ class Solution(object):
             elif char.isdigit():
                 b += char
             else:
-                break  # Stop when a non-digit is encountered
+                break
 
         if not b or b == "-" or b == "+":
-            return 0  # No valid digits found
+            return 0
 
         result = int(b)
         if result < INT_MIN:
